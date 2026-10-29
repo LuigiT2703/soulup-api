@@ -1,0 +1,20 @@
+# Build do Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+*.class
+
+# Credenciais e variaveis locais (NUNCA versionar)
+.env
+.env.*
+!.env.example
+*.local
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
