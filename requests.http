@@ -1,0 +1,91 @@
+### Testes da API SoulUp (IntelliJ HTTP Client ou extensao REST Client do VS Code)
+### Troque o host para a URL do Render quando for testar na nuvem.
+@host = http://localhost:8080
+
+### ---------- USUARIOS ----------
+GET {{host}}/usuarios
+
+###
+GET {{host}}/usuarios/1
+
+### 404 - usuario inexistente
+GET {{host}}/usuarios/99999
+
+### 201 - cadastrar
+POST {{host}}/usuarios
+Content-Type: application/json
+
+{ "nome": "Fernanda Alves", "email": "fernanda@email.com" }
+
+### 409 - e-mail duplicado
+POST {{host}}/usuarios
+Content-Type: application/json
+
+{ "nome": "Outra Pessoa", "email": "fernanda@email.com" }
+
+### 400 - nome invalido
+POST {{host}}/usuarios
+Content-Type: application/json
+
+{ "nome": "C4", "email": "c@email.com" }
+
+### 200 - atualizar (troque o id)
+PUT {{host}}/usuarios/1
+Content-Type: application/json
+
+{ "nome": "Ana Silva", "email": "ana.silva@email.com" }
+
+### 409 - excluir usuario com registros
+DELETE {{host}}/usuarios/1
+
+### historico do usuario
+GET {{host}}/usuarios/1/registros
+
+### ---------- ACOES ----------
+GET {{host}}/acoes
+
+###
+GET {{host}}/acoes?categoria=MOBILIDADE
+
+### 400 - categoria invalida
+GET {{host}}/acoes?categoria=XYZ
+
+###
+GET {{host}}/acoes/1
+
+### 201 - cadastrar
+POST {{host}}/acoes
+Content-Type: application/json
+
+{ "nome": "Fazer compostagem", "pontos": 14, "categoria": "RESIDUOS" }
+
+### 400 - pontos fora da faixa
+POST {{host}}/acoes
+Content-Type: application/json
+
+{ "nome": "Acao invalida", "pontos": 150, "categoria": "AGUA" }
+
+### ---------- REGISTROS ----------
+### 201 - registrar
+POST {{host}}/registros
+Content-Type: application/json
+
+{ "idUsuario": 1, "idAcao": 2 }
+
+### 409 - mesma acao de novo
+POST {{host}}/registros
+Content-Type: application/json
+
+{ "idUsuario": 1, "idAcao": 2 }
+
+### 404 - usuario inexistente
+POST {{host}}/registros
+Content-Type: application/json
+
+{ "idUsuario": 99999, "idAcao": 2 }
+
+### 204 - desfazer registro (troque o id)
+DELETE {{host}}/registros/1
+
+### ---------- RANKING ----------
+GET {{host}}/ranking
