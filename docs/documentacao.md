@@ -14,7 +14,7 @@
 | Luigi Tormim Carqueijeiro | RM572424 |
 
 **Repositório:** https://github.com/LuigiT2703/soulup-api
-**Deploy da API:** `https://SEU-SERVICO.onrender.com` _(atualizar)_
+**Deploy da API:** https://soulup-api-g73n.onrender.com
 **Front-end:** `https://SEU-FRONT.vercel.app` _(atualizar)_
 
 ---
@@ -44,7 +44,7 @@ Esta API RESTful em Java/Spring Boot é o back-end do front-end React. Ela cuida
 - **CORS:** liberado para o front local (`http://localhost:5173`) e para o publicado (`FRONT_URL`).
 
 ## 3. Endpoints
-Base: `https://SEU-SERVICO.onrender.com`. JSON em camelCase, datas `AAAA-MM-DD`.
+Base: `https://soulup-api-g73n.onrender.com`. JSON em camelCase, datas `AAAA-MM-DD`.
 
 | # | Verbo | URI | Corpo (JSON) | Sucesso | Erros possíveis |
 |---|---|---|---|---|---|

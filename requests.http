@@ -1,6 +1,7 @@
 ### Testes da API SoulUp (IntelliJ HTTP Client ou extensao REST Client do VS Code)
 ### Troque o host para a URL do Render quando for testar na nuvem.
 @host = http://localhost:8080
+# Nuvem (primeira chamada pode levar ~50 s): @host = https://soulup-api-g73n.onrender.com
 
 ### ---------- USUARIOS ----------
 GET {{host}}/usuarios
