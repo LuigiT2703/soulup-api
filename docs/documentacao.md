@@ -232,7 +232,7 @@ Exceções: `NaoEncontradoException` (404), `ValidacaoException` (400) e `Confli
 6. Rodar `SoulupApiApplication`. A API sobe em `http://localhost:8080`.
 7. Testar com o `requests.http` (IntelliJ) ou com o Postman.
 
-**Deploy no Render:** Web Service → Runtime Docker → plano Free → variáveis `DB_URL`, `DB_USER`, `DB_PASSWORD` e `FRONT_URL`. O plano grátis dorme quando fica sem uso, então a primeira requisição leva uns 50 s.
+**Deploy no Render:** Web Service → Runtime Docker → plano Free → variáveis `DB_URL`, `DB_USER`, `DB_PASSWORD` e `FRONT_URL`. O plano grátis dorme quando fica sem uso, então a primeira requisição pode levar até 1 minuto.
 
 ## 7. Telas do front-end integradas
 _(Colar aqui os prints das telas reais do front consumindo a API)_

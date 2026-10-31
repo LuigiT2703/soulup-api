@@ -12,7 +12,7 @@ Challenge FIAP 2026 · Sprint 4 · Domain Driven Design Using Java · Equipe **S
 
 **Deploy:** https://soulup-api-g73n.onrender.com (ex.: [/ranking](https://soulup-api-g73n.onrender.com/ranking))
 
-> ⚠️ O Render grátis "dorme" depois de 15 min sem uso. A **primeira requisição pode levar uns 50 segundos**; as próximas são rápidas.
+> ⚠️ O Render grátis "dorme" depois de 15 min sem uso. A **primeira requisição pode levar até 1 minuto**; as próximas são rápidas.
 
 ## Tecnologias
 - Java 21
