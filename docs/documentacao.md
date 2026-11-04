@@ -2,8 +2,8 @@
 
 <!-- CAPA (para o PDF) -->
 **Challenge FIAP 2026 · SoulUp**
-**Disciplina:** Domain Driven Design Using Java · Sprint 4
-**Equipe:** SoulPoints
+**Disciplina:** Domain Driven Design Using Java · Sprint 4  
+**Equipe:** SoulPoints  
 **Solução:** SoulUp, uma plataforma de gamificação sustentável
 
 | Integrante | RM |
@@ -13,8 +13,8 @@
 | Leonardo De Souza Bernard | RM570951 |
 | Luigi Tormim Carqueijeiro | RM572424 |
 
-**Repositório:** https://github.com/LuigiT2703/soulup-api
-**Deploy da API:** https://soulup-api-g73n.onrender.com
+**Repositório:** https://github.com/LuigiT2703/soulup-api  
+**Deploy da API:** https://soulup-api-g73n.onrender.com  
 **Front-end:** https://challenge-sem02-front.vercel.app
 
 ---
@@ -218,8 +218,6 @@ classDiagram
 ```
 Exceções: `NaoEncontradoException` (404), `ValidacaoException` (400) e `ConflitoException` (409), todas filhas de `RuntimeException`. O `GlobalExceptionHandler` (`@RestControllerAdvice`) transforma elas, e também as `SQLException`, em `ErroResposta {status, mensagem}`.
 
-> Dica pro PDF: cole o bloco Mermaid em https://mermaid.live e exporte como PNG/SVG.
-
 ## 6. Como rodar
 **Ferramentas:** IntelliJ IDEA, JDK 21, Maven (já vem no IntelliJ), Git e acesso ao Oracle da FIAP.
 
@@ -235,15 +233,27 @@ Exceções: `NaoEncontradoException` (404), `ValidacaoException` (400) e `Confli
 **Deploy no Render:** Web Service → Runtime Docker → plano Free → variáveis `DB_URL`, `DB_USER`, `DB_PASSWORD` e `FRONT_URL`. O plano grátis dorme quando fica sem uso, então a primeira requisição pode levar até 1 minuto.
 
 ## 7. Telas do front-end integradas
-_(Colar aqui os prints das telas reais do front consumindo a API)_
+Front-end publicado em https://challenge-sem02-front.vercel.app (React + Vite + TypeScript). Todas as telas abaixo usam os dados reais desta API.
 
-| Tela | Print |
-|---|---|
-| Lista de usuários / ranking | _print_ |
-| Cadastro de usuário | _print_ |
-| Catálogo de ações (filtro por categoria) | _print_ |
-| Registro de ação / histórico do usuário | _print_ |
-| Mensagem de erro (ex.: ação já registrada) | _print_ |
+**Ranking** (`GET /ranking`): participantes ordenados por pontos, com nível calculado pela API.
+
+![Ranking](imagens/front-ranking.png)
+
+**Perfil do participante** (`GET /usuarios/1` e `GET /usuarios/1/registros`): dados e histórico de ações.
+
+![Perfil do participante](imagens/front-perfil.png)
+
+**Dashboard** (`GET /usuarios`, `GET /acoes`, `POST /registros` e `DELETE /registros/{id}`): o participante registra ou desfaz uma ação, e os pontos, o nível e a posição atualizam na hora.
+
+![Dashboard](imagens/front-dashboard.png)
+
+**Cadastro de participantes** (`GET`, `POST`, `PUT` e `DELETE /usuarios`): CRUD completo, com as mensagens de validação da API.
+
+![Participantes](imagens/front-participantes.png)
+
+**Tratamento de erro** (`GET /usuarios/99999` → 404): o front mostra a mensagem quando a API responde que o participante não existe.
+
+![Erro 404](imagens/front-erro-404.png)
 
 ## 8. Uso de IA
 **Ferramenta:** Claude Code (Anthropic), usado no terminal integrado ao projeto.
@@ -256,7 +266,10 @@ _(Colar aqui os prints das telas reais do front consumindo a API)_
 - o `requests.http` e o rascunho do README e desta documentação.
 
 **O que foi conferido/corrigido pela equipe:**
-- _(preencher: ex. ajustes nas mensagens de erro, nos dados de teste, nas validações...)_
+- Todos os 14 endpoints foram testados pela equipe, localmente e no Render, inclusive os casos de erro (400, 404 e 409).
+- A conexão com o Oracle da FIAP foi testada antes do deploy, e a senha do banco ficou só nas variáveis de ambiente do Render, fora do GitHub.
+- O plano do Render foi trocado do pago (padrão) para o Free, e a URL real do serviço (`soulup-api-g73n`) foi corrigida no README e no front.
+- A variável `FRONT_URL` foi ajustada para aceitar a URL da Vercel, e o CORS foi conferido no site publicado (leitura e escrita).
 - Os dados de teste do `requests.http` foram trocados porque o e-mail de exemplo já existia no script do banco (dava 409 em vez de 201).
 
 **Decisões da equipe:**
