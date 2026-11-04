@@ -12,6 +12,8 @@ Challenge FIAP 2026 · Sprint 4 · Domain Driven Design Using Java · Equipe **S
 
 **Deploy:** https://soulup-api-g73n.onrender.com (ex.: [/ranking](https://soulup-api-g73n.onrender.com/ranking))
 
+**Front-end (React):** https://challenge-sem02-front.vercel.app · [repositório](https://github.com/LuigiT2703/challenge-sem02-front)
+
 > ⚠️ O Render grátis "dorme" depois de 15 min sem uso. A **primeira requisição pode levar até 1 minuto**; as próximas são rápidas.
 
 ## Tecnologias
@@ -49,7 +51,7 @@ As credenciais **não ficam no código**. Configure antes de rodar:
 | `DB_URL` | `jdbc:oracle:thin:@oracle.fiap.com.br:1521/ORCL` |
 | `DB_USER` | `rm000000` |
 | `DB_PASSWORD` | sua senha do Oracle FIAP |
-| `FRONT_URL` | `https://seu-front.vercel.app` (pode ter várias, separadas por vírgula) |
+| `FRONT_URL` | `https://challenge-sem02-front.vercel.app` (pode ter várias, separadas por vírgula) |
 | `PORT` | definida pelo Render; local usa `8080` |
 
 ## Banco

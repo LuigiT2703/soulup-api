@@ -15,7 +15,7 @@
 
 **Repositório:** https://github.com/LuigiT2703/soulup-api
 **Deploy da API:** https://soulup-api-g73n.onrender.com
-**Front-end:** `https://SEU-FRONT.vercel.app` _(atualizar)_
+**Front-end:** https://challenge-sem02-front.vercel.app
 
 ---
 
