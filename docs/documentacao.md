@@ -1,10 +1,10 @@
 # SoulUp – Documentação da API Java
 
 <!-- CAPA (para o PDF) -->
-**Challenge FIAP 2026 · SoulUp**
+**Challenge FIAP 2026 · SoulUp**  
 **Disciplina:** Domain Driven Design Using Java · Sprint 4  
 **Equipe:** SoulPoints  
-**Solução:** SoulUp, uma plataforma de gamificação sustentável
+**Solução:** SoulUp, uma plataforma de gamificação sustentável  
 
 | Integrante | RM |
 |---|---|
